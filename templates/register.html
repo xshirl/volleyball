@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+<body>  
+
+    <form method="POST" action="/register" >
+        <input type="text" name="team" placeholder="Team Name">
+        <input type="text" name="city" placeholder="City">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Registers</h1>
+    {% for register in registers %}
+      <p>{{register.team}}</p>
+      <p>{{register.city}}</p>
+    {% endfor %}
+
+
+</body>
+</html>

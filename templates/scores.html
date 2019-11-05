@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+<body>  
+
+    <form method="POST" action="/scores" >
+        <input type="text" name="court" placeholder="Court #" >
+        <input type="text" name="game" placeholder="Game #">
+        <input type="text" name="team" placeholder="Team Name">
+        <input type="text" name="score" placeholder="Score">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Scores</h1>
+    {% for score in scores %}
+      <p>{{score.court}}</p>
+      <p>{{score.game}}</p>
+      <p>{{score.team}}</p>
+      <p>{{score.score}}</p>
+    {% endfor %}
+</body>
+</html>
